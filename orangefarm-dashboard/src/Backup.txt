@@ -1,0 +1,106 @@
+import React, { useState } from 'react';
+import SlidingMenu from './SlidingMenu';
+import Revenue from "./Components/Revenue";
+import LostDeals from './Components/LostDeals';
+import TopStates from './Components/TopStates';
+import QuarterGoals from './Components/QuarterGoals';
+import UserChats from './Components/UserChats';
+import NewDeals from './Components/NewDeals';
+import Customers from './Components/Customers';
+
+import TopMonth from './Components/TopMonth';
+import TopYear from './Components/TopYear';
+import TopBuyer from './Components/TopBuyer';
+
+import '@fortawesome/fontawesome-free/css/all.css';
+import GrowthBody from "./Components/GrowthBody";
+
+// import '../tailwind.css';
+
+const revenuePercentage = 15;
+const revenueValue = '$10,000';
+const lostDealsPercentage = 4;
+const lostDealsValue = '$2,500';
+// const goalRange = [0, 100];
+// const initialValue = 75;
+
+function App() {
+  const [isOpen, setIsOpen] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen); // Toggle menu state on click
+  };
+
+
+  return (
+    <div className="App bg-gray-200">
+      <div className="flex flex-row">
+
+        <div className="relative h-screen" >
+          <button className="absolute top-7 left-6 m-0 bg-orange-300 h-8 w-8 text-white p-1 rounded-md hover:bg-orange-600   focus:outline-none focus:opacity-20 focus:text-black" onClick={toggleMenu}>
+            <i className="fas fa-bars"></i>
+          </button>
+          <SlidingMenu
+            isOpen={isOpen}
+            toggleMenu={toggleMenu}
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+          />
+
+        </div>
+
+        <div className="">
+          <div className="grid grid-cols-3">
+            <Revenue
+              revenuePercentage={revenuePercentage}
+              revenueValue={revenueValue}
+            // onClick={revenueNavigationFunction}
+            />
+            <LostDeals
+              lostDealsPercentage={lostDealsPercentage}
+              lostDealsValue={lostDealsValue}
+            // onClick={lostDealsNavigationFunction}
+            />
+            <QuarterGoals
+              goalRange={[0, 100]}
+              initialValue={86}
+              onGoalChange={(value) => {
+                // Implement your logic to handle the changed goal value
+                console.log('New goal:', value);
+              }}
+            />
+          </div>
+          {/* <div className="flex flex-wrap gap-4"> */}
+          <div className="grid grid-cols-2">
+            <Customers />
+            {/* <Growth /> */}
+            <div >
+              <GrowthBody />
+              <div className="grid grid-cols-3">
+                <TopMonth />
+                <TopYear />
+                <TopBuyer />
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div className="grid grid-cols-3">
+            <UserChats />
+
+            <TopStates />
+
+            <NewDeals />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  );
+}
+
+export default App;
