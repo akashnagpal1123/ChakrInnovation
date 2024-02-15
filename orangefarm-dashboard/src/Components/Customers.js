@@ -12,10 +12,10 @@ import Navigate_Arrow from "../assets/navigate-arrow.png";
 
 const customersData = [
     { name: 'Chris Friedkly', company: 'Supermarket Villanova', location: 'New York' },
-    { name: 'Maggie Johnson', company: 'Google', location: 'Egypt' },
-    { name: 'Naomi Love', company: 'Amazon', location: 'Japan' },
-    { name: 'Zoya Akhtar', company: 'Microsoft', location: 'Russia' },
-    // ... other customers
+    { name: 'Maggie Johnson', company: 'Oasis Organic Inc.', location: 'Egypt' },
+    { name: 'Naomi Love', company: 'New York Finest Foods', location: 'Japan' },
+    { name: 'Zoya Akhtar', company: 'Walmart', location: 'Russia' },
+  
 ];
 
 function Customers() {
