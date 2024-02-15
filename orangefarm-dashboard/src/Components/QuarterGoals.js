@@ -1,5 +1,7 @@
 import React from 'react';
-import SemiCircleProgressBar from "react-progressbar-semicircle";
+// import SemiCircleProgressBar from "react-progressbar-semicircle";
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import Navigate_Arrow from "../assets/navigate-arrow.png";
 // import { ArcSlider } from '@react-native-svg/elements';
 
@@ -20,11 +22,21 @@ function QuarterGoals({ goalRange, initialValue, onGoalChange }) {
                 </h3>
 
                 <div className="rounded-md  relative mx-auto" style={{ width: 150, height: 100 }}>
-                    <SemiCircleProgressBar stroke="#fb923c" className="rounded-m " rotate={-90}
+                    {/* <SemiCircleProgressBar stroke="#fb923c" className="rounded-m " rotate={-90}
                         percentage={percentage} diameter={150} text={`${percentage}%`}
 
 
-                    />
+                    /> */}
+
+
+                    <CircularProgressbar className="transform -rotate-90" value={percentage}  stroke="#fb923c"  
+                        strokeWidth={8}
+                        styles={{
+                            path: { strokeLinecap: 'round',
+                            stroke:"#fb923c"  }, // Set strokeLinecap to 'butt' for a flat line at the end
+                        }}
+                        circleRatio={0.5} // Set circleRatio to 0.5 for a semi-circle
+                    />;
                     <span className="absolute left-1/2 top-10 transform -translate-x-1/2 font-bold text-3xl">{percentage}%</span>
 
 
