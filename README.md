@@ -7,11 +7,15 @@ PROJECT NAME => 💻 : Chakr Innovation Dashboard 🧑‍🏫
 Welcome to my Chakr-Innovation Dashboard! This application allows users to explore Revenue & Profit Chart data in a user-friendly interface.
 Backend Deploy to Render 
 
-<<<<<<< HEAD
-[Deployed App Vercel Link](https://chakr-innovation-98ot-1vkswtvpl-akashnagpal1123s-projects.vercel.app/)
-=======
-[Deployed App Vercel Link]([https://github.com/username/repository](https://chakr-innovation-98ot-1vkswtvpl-akashnagpal1123s-projects.vercel.app/))
->>>>>>> 990d3cc9a5c31ca305bfdd6bc1d7af49d29e09e7
+----------------------------------
+
+[Deployed Frontend Vercel Link](https://chakr-innovation-98ot-1vkswtvpl-akashnagpal1123s-projects.vercel.app/)
+
+----------------------------------
+
+[Deployed Frontend Vercel Link](https://chakr-innovation-px0sa4jh2-akashnagpal1123s-projects.vercel.app/)
+
+----------------------------------
 
 About Project -
 This React component seamlessly incorporates Chart.js to generate a line chart that visualizes revenue data over a specific duration. Additionally, it includes a doughnut chart that illustrates revenue growth, complemented by a user interface crafted in adherence to the provided Figma design.
