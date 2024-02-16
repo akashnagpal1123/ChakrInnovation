@@ -13,7 +13,7 @@ Backend Deploy to Render
 
 ----------------------------------
 
-[Deployed Frontend Vercel Link](https://chakr-innovation-px0sa4jh2-akashnagpal1123s-projects.vercel.app/)
+[Deployed Backend Vercel Link](https://chakr-innovation-px0sa4jh2-akashnagpal1123s-projects.vercel.app/)
 
 ----------------------------------
 
